@@ -1,0 +1,128 @@
+html{
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 115px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+ 
+}
+
+header{
+    height: 60px;
+    background: #e3e34e;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+nav{
+    width: 100%;
+
+}
+ul.primera_ul{
+   list-style: none;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   width: 100%;
+   max-width: 1220px;
+ 
+}
+li{
+    list-style: none;
+    margin: auto 10px;
+}
+a{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 5px;
+}
+.desplegable{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+.desplegable.abierto{
+  width: auto;
+  height: 110px;
+  position: absolute;
+  z-index: 5;
+  background: #e3e34e;
+  margin: 14px 0;
+  padding: 0;
+ border-left: 1px solid;
+ border-bottom: 1px solid;
+ border-right: 1px solid;
+}
+.desplegable.abierto li{padding-top: 5px;}
+[class*=icon-]::before{
+  padding: 5px;
+  font-size: 30px;
+}
+
+section{
+  max-width: 1200px;
+  width: 100%;
+  margin:0 auto;
+}
+
+tr:first-child{background-color: #9f9f9f;}
+tr:first-child td{
+  text-align: center;
+}
+td{
+  border: 2px solid black;
+  text-align: end;
+  padding: 10px;
+}
+
+#inputContainer{
+  display: flex;
+    flex-wrap: wrap;
+    max-width: 915px;
+    
+}
+#inputContainer input{margin:auto 5px 30px;height: 30px;}
+#inputContainer button{height:max-content ;}
+.enviar{font-size: 18px;
+  padding: 10px;
+  color: white;
+  background: red;
+  margin-bottom: 10px;}
+  #celular{display: none;}
+
+
+  @media only screen and (max-width:767px){
+  #escritorio{display: none;}
+  #celular{    position: absolute;
+    width: 0px;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: red;
+    transition: all ease 0.3s;
+    z-index: 1;}
+  }
+  #celular ul{flex-direction: column;padding: 0;align-items: flex-start;}
+  #celular ul li{margin: 10px; display: none;}
+  #celular.abierto{width: 200px;}
+  #celular.abierto ul li{display: flex;}
