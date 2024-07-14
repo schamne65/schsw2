@@ -14,6 +14,7 @@
 <body>
     <?php
     include "./comunes/nav.php";
+    
     include './db/conexion.php';
 checkLogin();
 
