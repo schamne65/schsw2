@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <input type="submit" value="Login">
 </form>
 
-<button><a href="./registro.php">registrarse</a></button>
+
 
 <?php
 if (isset($error)) {
