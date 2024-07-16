@@ -11,7 +11,7 @@ checkLogin();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_icon.css">
     
-    <title>Tienda Despacho ¿Guada, me pondre feliz?</title>
+    <title>Tienda Despacho </title>
     <style>
         input{width: 80px;margin:0 5px 20px}
     </style>
@@ -22,7 +22,7 @@ include '../db/conexion.php';
 
 ?>
 <section>
-<h2>Pedidos Tienda Nube</h2>
+<h2>Pedidos Tienda Nube ¿Guada, me pondre feliz?</h2>
     <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube">
         <label for="cliente_id">Doc. Cliente</label>
