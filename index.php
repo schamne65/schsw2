@@ -1,6 +1,6 @@
 <?php
-include './comunes/session.php';
-checkLogin();
+//include './comunes/session.php';
+//checkLogin();
 ?>
 
 <!DOCTYPE html>
