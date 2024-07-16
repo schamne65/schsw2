@@ -20,7 +20,7 @@ checkLogin();
     include './comunes/nav.php';
     ?>
     <section>
-        <h1>SCH SW para Pauletti</h1>
+        <h1>SCH SW para Regidiet</h1>
     </section>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>
