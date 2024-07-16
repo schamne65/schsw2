@@ -36,9 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <?php
     echo $_SESSION['username'];
+    echo $username;
     ?>
-<h2>Login</h2>
-<form method="post">
+<h2>Login pauletti</h2>
+<form method="POST">
     <label for="username">Usuario:</label><br>
     <input type="text" name="username" id="username" required><br>
     <label for="password">Contraseña:</label><br>
