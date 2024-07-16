@@ -1,4 +1,5 @@
 <?php
+session_start();
 include './comunes/session.php';
 checkLogin();
 ?>
