@@ -6,7 +6,7 @@ html{
 body{
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   
   flex-direction: column;
   align-items: center;
@@ -82,6 +82,7 @@ section{
   max-width: 1200px;
   width: 100%;
   margin:0 auto;
+  margin-bottom: 30px;
 }
 
 tr:first-child{background-color: #9f9f9f;}
@@ -105,13 +106,22 @@ td{
 .enviar{font-size: 18px;
   padding: 10px;
   color: white;
-  background: red;
+  background: #e3e34e;
   margin-bottom: 10px;}
   #celular{display: none;}
+  .desplegable-menu{display: none;}
+  .div-fixed{
+    position: sticky;
+    top: 0px;
+    background: #f2f2f2;
+    padding-top: 20px;
 
+  }
 
   @media only screen and (max-width:767px){
   #escritorio{display: none;}
+  .deslplegable-menu{display: flex;}
+
   #celular{    position: absolute;
     width: 0px;
     top: 60px;

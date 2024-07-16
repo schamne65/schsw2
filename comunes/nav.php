@@ -24,12 +24,13 @@
         <li><a href="../tarea/asignar_tarea.php" class="icon-calendar">Tarea</a></li>
         <li><a href="#" class="icon-upload2 abrir">Tienda Nube</a>
         <ul class="desplegable">
-            <li><a href="../prueba/despacho_tienda.php">Despachar Pedidos</a></li>
+            <li><a href="../prueba/despacho_tienda.php">Estado del pedido</a></li>
             <li><a href="../prueba/tienda_nube.php">Armar pedido convencional</a></li>
             <li><a href="../prueba/tienda_nube_especial.php">Armar pedido especial</a></li>
          </ul>
 
         </li>
+        <li><a href="../usuario/logout.php">salir</a></li>
         </ul>
     </nav>
     <button class="desplegable-menu">Menu</button>
@@ -56,7 +57,13 @@
         </li>
         <li><a href="../proveedores/proveedores.php" class="icon-user-tie">Proveedores</a></li>
         <li><a href="../tarea/asignar_tarea.php" class="icon-calendar">Tarea</a></li>
-        <li><a href="../prueba/tienda_nube.php" class="icon-upload2">Tienda Nube</a></li>
+        <li><a href="../prueba/tienda_nube.php" class="icon-upload2">Tienda Nube
+        <ul class="desplegable">
+            <li><a href="../prueba/despacho_tienda.php">Estado del pedido</a></li>
+            <li><a href="../prueba/tienda_nube.php">Armar pedido convencional</a></li>
+            <li><a href="../prueba/tienda_nube_especial.php">Armar pedido especial</a></li>
+         </ul>
+        </a></li>
         </ul>
     </nav>
 </header>

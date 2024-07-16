@@ -20,10 +20,10 @@
         <label for="usuario_nombre">Nombre Usuario</label>
         <input type="text" id="usuario_nombre" name="usuario_nombre" required >
         
-        <label for="usuario_contraseña">Contraseña</label>
-        <input type="password" id="usuario_contraseña"  name="usuario_contraseña" required> 
+        <label for="usuario_contrasenia">Contraseña</label>
+        <input type="password" id="usuario_contrasenia"  name="usuario_contrasenia" required> 
 
-        <label for="usuario_email">E-mail para recuperar contraseña</label>
+        <label for="usuario_email">E-mail para recuperar contrasenia</label>
         <input type="e-mail" id="usuario_email"  name="usuario_email" > 
       
        

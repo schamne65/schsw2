@@ -1,3 +1,7 @@
+<?php
+include '../comunes/session.php';
+checkLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +13,20 @@
     
     <title>Tienda Despacho</title>
     <style>
-        input{width: 50px;margin:0 5px 20px}
+        input{width: 80px;margin:0 5px 20px}
     </style>
 </head>
 <body>
 <?php  include '../comunes/nav.php';
 include '../db/conexion.php';
-checkLogin();
+
 ?>
 <section>
 <h2>Pedidos Tienda Nube</h2>
     <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube">
         <label for="cliente_id">Doc. Cliente</label>
-        <input type="text" id="cliente_id" name="cliente_id" required >
+        <input autofocus type="text" id="cliente_id" name="cliente_id" required >
         <label for="tipo_pedido">Tipo de pedido</label>
         <select name="tipo_pedido" id="tipo_pedido">
             <option value="Cajas estandar" >Cajas tipo estandar</option>
@@ -43,6 +47,9 @@ checkLogin();
 
         <label for="nombre_responsable"> Nombre Responsable:</label>
         <input type="text" id="nombre_responsable" name="nombre_responsable" requerid>
+
+        <label for="barra"> Codigo de barra:</label>
+        <input type="text" id="barra" name="barra" requerid>
          
         <input type="submit" value="Guardar">
 </form>

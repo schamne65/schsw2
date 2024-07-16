@@ -1,10 +1,10 @@
 <?php
+
 include "../db/conexion.php";
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
 
     $base = conexion();
     $consulta =  "SELECT * FROM usuarios WHERE usuario_nombre = ?";
@@ -14,42 +14,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (count($result) > 0) {
         $row = $result[0];
-        if (password_verify($password, $row['usuario_contraseña'])) {
-            $_SESSION['username'] = $username; // Cambié $usuario_nombre a $username
-            header('Location: ../index.php');
+        if (password_verify($password, $row['usuario_contrasenia'])) {
+            $_SESSION['username'] = $username; // Guardar nombre de usuario en la sesión
+            header('Location: /prueba/tienda_nube.php');
             exit();
         } else {
-            $error = "Invalid password.";
+            $error = "Contraseña inválida.";
         }
     } else {
-        $error = "No user found.";
+        $error = "Usuario no encontrado.";
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Login</title>
 </head>
 <body>
-
 <h2>Login</h2>
 <form method="post">
-    Username:<br>
-    <input type="text" name="username" required>
-    <br>
-    Password:<br>
-    <input type="password" name="password" required>
-    <br><br>
+    <label for="username">Usuario:</label><br>
+    <input type="text" name="username" id="username" required><br>
+    <label for="password">Contraseña:</label><br>
+    <input type="password" name="password" id="password" required><br><br>
     <input type="submit" value="Login">
 </form>
+
+<button><a href="./registro.php">registrarse</a></button>
 
 <?php
 if (isset($error)) {
     echo "<p style='color:red;'>$error</p>";
 }
 ?>
-
 </body>
 </html>

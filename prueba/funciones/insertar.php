@@ -1,12 +1,12 @@
 <?php
 include "../../db/conexion.php";
 
-function despachoTiendaNube($cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$fecha) {
+function despachoTiendaNube($cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$codigo,$fecha) {
     try {
         $base = conexion();
-        $consulta = "INSERT INTO despacho_tienda_nube (id_cliente,tipo_pedido,caja_mixtas,dulce_leche,dulce_cacao,mermelada_frutilla,mermelada_durazno,nombre_responsable,fecha_armado) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $consulta = "INSERT INTO despacho_tienda_nube (id_cliente,tipo_pedido,caja_mixtas,dulce_leche,dulce_cacao,mermelada_frutilla,mermelada_durazno,nombre_responsable,codigo_barra,fecha_armado) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $base->prepare($consulta);
-        $stmt->execute([$cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$fecha]);
+        $stmt->execute([$cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$codigo,$fecha]);
     
     return true;
     
@@ -26,12 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mermelada_frutilla = $_POST['mermelada_frutilla'];
         $mermelada_durazno = $_POST['mermelada_durazno'];
         $nombre_responsable = $_POST['nombre_responsable']; 
+        $codigo = $_POST['barra']; 
         $fecha=date("Y-m-d H:i:s");
 
     
 
     // Insertar el proveedor en la base de datos
-    if (despachoTiendaNube($cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$fecha)) {
+    if (despachoTiendaNube($cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$codigo,$fecha)) {
         echo "insumo insertado correctamente.";
     } else {
         echo "Error al insertar insumo.";
@@ -43,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  function despachoEstado($cliente_id,$estado_pedido) {
     try {
  $base = conexion();
- $actualizar_estado = "UPDATE despacho_tienda_nube SET estado_pedido = ? WHERE id_cliente = ?";
+ $actualizar_estado = "UPDATE despacho_tienda_nube SET estado_pedido = ? WHERE codigo_barra = ?";
  $stmt = $base->prepare($actualizar_estado);
  $stmt->execute([$estado_pedido,$cliente_id]);
     return true;
