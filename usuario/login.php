@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result[0];
         if (password_verify($password, $row['usuario_contrasenia'])) {
             $_SESSION['username'] = $username; // Guardar nombre de usuario en la sesión
-            header('Location: /prueba/tienda_nube.php');
+            header('Location: /');
             exit();
         } else {
             $error = "Contraseña inválida.";
