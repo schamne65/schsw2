@@ -2,7 +2,7 @@
 
 function checkLogin() {
     if (!isset($_SESSION['username'])) {
-        header('Location: /');
+        header('Location: login.php');
         exit();
     }
 }
