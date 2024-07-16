@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result[0];
         if (password_verify($password, $row['usuario_contrasenia'])) {
             $_SESSION['username'] = $username; // Guardar nombre de usuario en la sesión
-            header('Location: /pauletti/index.php');
+            header('Location: /index.php');
             exit();
         } else {
             $error = "Contraseña inválida.";
