@@ -11,7 +11,7 @@ checkLogin();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_icon.css">
     
-    <title>Tienda Despacho ¿Guada me pondre feliz?</title>
+    <title>Tienda Despacho ¿Guada, me pondre feliz?</title>
     <style>
         input{width: 80px;margin:0 5px 20px}
     </style>
