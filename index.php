@@ -19,9 +19,12 @@ checkLogin();
 <body>
     <?php
     include './comunes/nav.php';
+    if ($_SESSION['username'] == "fabrica24") {
+           $nombre="hola";
+    }
     ?>
     <section>
-        <H2>Bienvenido <?php echo $_SESSION['username']; ?> a</H2>
+        <H2>Bienvenido <?php echo $nombre ?> a</H2>
         <h1>SCH SW</h1>
     </section>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
