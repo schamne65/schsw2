@@ -25,7 +25,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
     
     <title>Tienda Despacho </title>
     <style>
-        input{width: 80px;margin:0 5px 20px}
+        input{width: 60px;margin:0 5px 20px}
     </style>
 </head>
 <body>
