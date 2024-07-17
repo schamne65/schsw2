@@ -119,6 +119,8 @@ td{
   }
 .login{height: 100vh;background: #e3e34e;display: flex;justify-content: center;align-items: center;}
 .login section{text-align: center;}
+.login h2{font-size: 34px;}
+.login label{font-size: 20px;margin-bottom: 2px;}
   @media only screen and (max-width:767px){
   #escritorio{display: none;}
   .deslplegable-menu{display: flex;}
