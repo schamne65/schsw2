@@ -30,7 +30,7 @@
          </ul>
 
         </li>
-        <li><a href="../usuario/logout.php" class="icon-exit">Salir</a></li>
+        <li><a href="../usuario/logout.php" class="icon-enter">Salir</a></li>
         </ul>
     </nav>
     <button class="desplegable-menu">Menu</button>
@@ -64,6 +64,7 @@
             <li><a href="../prueba/tienda_nube_especial.php">Armar pedido especial</a></li>
          </ul>
         </a></li>
+        <li><a href="../usuario/logout.php" class="icon-enter">Salir</a></li>
         </ul>
     </nav>
 </header>
