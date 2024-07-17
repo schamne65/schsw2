@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" name="username" id="username" required><br>
             <label for="password">Contraseña:</label><br>
             <input type="password" name="password" id="password" required><br><br>
-            <input type="submit" value="Login">
+            <input type="submit" value="Ingresar">
         </form>
 </section>      
 
