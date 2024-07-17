@@ -30,7 +30,7 @@
          </ul>
 
         </li>
-        <li><a href="../usuario/logout.php">salir</a></li>
+        <li><a href="../usuario/logout.php" class="icon-exit">Salir</a></li>
         </ul>
     </nav>
     <button class="desplegable-menu">Menu</button>
