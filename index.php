@@ -19,11 +19,20 @@ checkLogin();
 <body>
     <?php
     include './comunes/nav.php';
-    if ($_SESSION['username'] == "fabrica24") {
-           $nombre="hola";
+    switch ($_SESSION['username']) {
+        case 'fabrica24':
+            $nombre="";
+            break;
+        case 'Juanmanuel':
+            $nombre="Juan Manuel";
+            break;
+        case 'administracion':
+            $nombre="Araceli";
+            break;
+       
     }
     ?>
-    <section>
+    <section class="index">
         <H2>Bienvenido <?php echo $nombre ?> a</H2>
         <h1>SCH SW</h1>
     </section>  
