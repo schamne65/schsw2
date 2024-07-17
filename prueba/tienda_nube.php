@@ -149,7 +149,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                             <td><?php echo $row['fecha_armado'] ?></td> 
                             <?php
                             switch ($row['estado_pedido']) {
-                                case 'En preparacion':?>
+                                case 'En Preparacion':?>
                                     <td style="background:red;"><?php echo $row['estado_pedido'] ?></td>
                                 <?php    break;
                                    case 'Esperando despacho'?>
