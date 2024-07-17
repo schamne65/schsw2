@@ -44,9 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  function despachoEstado($cliente_id,$estado_pedido) {
     try {
  $base = conexion();
- $consulta = "SELECT codigo_barra FROM despacho_tienda_nube
+ $consulta1 = "SELECT codigo_barra FROM despacho_tienda_nube
 WHERE EXISTS (SELECT codigo_barra FROM despacho_tienda_nube WHERE despacho_tienda_nube.codigo_barra = ?)";
- $stmt = $base->prepare($consulta);
+ $stmt = $base->prepare($consulta1);
  $stmt->execute([$cliente_id]);
  $fila = $stmt->fetch(PDO::FETCH_ASSOC);
  $stock_actual = $fila['stock_disponible'];
