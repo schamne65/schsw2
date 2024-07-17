@@ -22,7 +22,7 @@ include '../db/conexion.php';
 
 ?>
 <section>
-<h2>Pedidos Tienda Nube ¿Guada, me pondre feliz?</h2>
+<h2>Pedidos Tienda Nube </h2>
     <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube">
         <label for="cliente_id">Doc. Cliente</label>

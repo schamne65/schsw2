@@ -125,7 +125,7 @@ td{
 .login .boton-enviar{width: 170px;font-size: 22px;height: 24px;}
   @media only screen and (max-width:767px){
   #escritorio{display: none;}
-  .deslplegable-menu{display: flex;}
+  .desplegable-menu{display: flex;}
 
   #celular{    position: absolute;
     width: 0px;
