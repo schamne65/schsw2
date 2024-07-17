@@ -122,7 +122,7 @@ td{
 .login h2{font-size: 34px;}
 .login label{font-size: 20px;margin-bottom: 2px;}
 .login input{height: 22px;margin-bottom: 5px;}
-.login .boton-enviar{width: 170px;}
+.login .boton-enviar{width: 170px;font-size: 22px;}
   @media only screen and (max-width:767px){
   #escritorio{display: none;}
   .deslplegable-menu{display: flex;}
