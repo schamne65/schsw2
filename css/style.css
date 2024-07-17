@@ -127,6 +127,7 @@ td{
 h2{font-size: 28px;}
 label{font-size: 18px;}
 input{height: 18px;}
+select{height: 18px;}
 .guardar{width: 65px;height: 25px;cursor: pointer;}
   @media only screen and (max-width:767px){
   #escritorio{display: none;}

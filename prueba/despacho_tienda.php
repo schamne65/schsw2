@@ -46,7 +46,7 @@ include '../db/conexion.php';
         <option value="Preparando" >En Preparacion</option>
         <option value="Esperando despacho" >Esperando despacho</option>
         </select>
-        <label for="cliente_id"> Cliente:</label>
+        <label for="cliente_id"> Codigo de barra:</label>
         <input type="text" id="cliente_id" name="cliente_id" requerid>
         
         
