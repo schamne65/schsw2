@@ -21,19 +21,19 @@ checkLogin();
     include './comunes/nav.php';
     switch ($_SESSION['username']) {
         case 'fabrica24':
-            $nombre="";
+            $nombre="o";
             break;
         case 'Juanmanuel':
-            $nombre="Juan Manuel";
+            $nombre="o Juan Manuel";
             break;
         case 'administracion':
-            $nombre="Araceli";
+            $nombre="a Araceli";
             break;
        
     }
     ?>
     <section class="index">
-        <H2>Bienvenido <?php echo $nombre ?> a</H2>
+        <H2>Bienvenid<?php echo $nombre ?> a</H2>
         <h1>SCH SW</h1>
     </section>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
