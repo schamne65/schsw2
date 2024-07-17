@@ -117,7 +117,8 @@ td{
     padding-top: 20px;
 
   }
-
+.login{height: 100vh;background: #e3e34e;display: flex;justify-content: center;align-items: center;}
+.login section{text-align: center;}
   @media only screen and (max-width:767px){
   #escritorio{display: none;}
   .deslplegable-menu{display: flex;}
