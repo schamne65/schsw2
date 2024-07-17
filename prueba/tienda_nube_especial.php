@@ -1,3 +1,17 @@
+<?php
+include '../db/conexion.php';
+checkLogin();
+// Verifica si la sesión está activa
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 45)) {
+    // Si la última actividad fue hace más de 15 minutos, borra la sesión
+    session_unset();     // unset $_SESSION variable for the run-time 
+    session_destroy();   // destroy session data in storage
+}
+
+// Actualiza la última actividad de la sesión
+$_SESSION['LAST_ACTIVITY'] = time();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
