@@ -63,7 +63,7 @@ include '../db/conexion.php';
         <label for="barra"> Codigo de barra:</label>
         <input type="text" id="barra" name="barra" requerid>
          
-        <input type="submit" value="Guardar">
+        <input class="guardar" type="submit" value="Guardar">
 </form>
 
 <?php
