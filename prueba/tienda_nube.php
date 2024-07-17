@@ -4,7 +4,7 @@ checkLogin();
 
 
 // Verifica si la sesión está activa
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 120)) {
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 500)) {
     // Si la última actividad fue hace más de 15 minutos, borra la sesión
     session_unset();     // unset $_SESSION variable for the run-time 
     session_destroy();   // destroy session data in storage
@@ -70,7 +70,7 @@ include '../db/conexion.php';
 
         $conexiones = conexion();
         if ($conexiones) {
-            $consulta = "SELECT * FROM despacho_tienda_nube";
+            $consulta = "SELECT * FROM despacho_tienda_nube ORDER BY fecha_armado DESC";
             try {
                 $stmt = $conexiones->query($consulta);
                 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
