@@ -29,6 +29,9 @@ checkLogin();
         case 'administracion':
             $nombre="a Araceli";
             break;
+        case 'schswadmin':
+            $nombre="o Nicolás";
+            break;     
        
     }
     ?>
