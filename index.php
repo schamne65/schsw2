@@ -21,6 +21,7 @@ checkLogin();
     include './comunes/nav.php';
     ?>
     <section>
+        <H2>Bienvenido <?php echo $_SESSION['username']; ?> a</H2>
         <h1>SCH SW</h1>
     </section>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
