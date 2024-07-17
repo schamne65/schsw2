@@ -124,6 +124,9 @@ td{
 .login input{height: 22px;margin-bottom: 5px;}
 .login .boton-enviar{width: 170px;font-size: 18px;height: 24px;}
 .index h2{font-size: 40px; text-align: center;}
+h2{font-size: 28px;}
+label{font-size: 22px;}
+input{height: 20px;}
   @media only screen and (max-width:767px){
   #escritorio{display: none;}
   .desplegable-menu{display: flex;}

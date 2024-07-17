@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insertar el proveedor en la base de datos
     if (despachoTiendaNube($cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$codigo,$fecha)) {
-        echo "insumo insertado correctamente.";
+        
     } else {
         echo "Error al insertar insumo.";
     }
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insertar el proveedor en la base de datos
     if (despachoEstado($cliente_id,$estado_pedido)) {
-        echo "insumo insertado correctamente.";
+       
     } else {
         echo "Error al insertar insumo.";
     }
