@@ -46,9 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $base = conexion();
         $consulta = "UPDATE  despacho_tienda_nube SET id_cliente = ?,tipo_pedido = ?,caja_mixtas = ?,dulce_leche = ?,dulce_cacao = ?,mermelada_frutilla = ?,mermelada_durazno = ?,nombre_responsable = ?,codigo_barra = ?,fecha_armado = ? WHERE id_cliente = ?";
         $stmt = $base->prepare($consulta);
-        $stmt->execute([$cliente_id,$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$codigo,$fecha]);
-        $stmt->closeCursor(); // Cierra el cursor para liberar recursos
-$base = null; // Cierra la conexión a la base de datos
+        $stmt->execute([$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$codigo,$fecha,$cliente_id,]);
+       // $stmt->closeCursor(); // Cierra el cursor para liberar recursos
+//$base = null; // Cierra la conexión a la base de datos
     
     return true;
     
