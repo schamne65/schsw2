@@ -44,15 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  function despachoEstado($cliente_id,$estado_pedido) {
     try {
  $base = conexion();
- $consulta1 = "SELECT codigo_barra FROM despacho_tienda_nube
-WHERE EXISTS (SELECT codigo_barra FROM despacho_tienda_nube WHERE despacho_tienda_nube.codigo_barra = ?)";
- $stmt = $base->prepare($consulta1);
- $stmt->execute([$cliente_id]);
- $fila = $stmt->fetch(PDO::FETCH_ASSOC);
- $stock_actual = $fila['stock_disponible'];
-
-if ($cliente_id == $stock_actual) {
-
  $actualizar_estado = "UPDATE despacho_tienda_nube SET estado_pedido = ? WHERE codigo_barra = ?";
  $stmt = $base->prepare($actualizar_estado);
  $stmt->execute([$estado_pedido,$cliente_id]);
@@ -63,7 +54,7 @@ if ($cliente_id == $stock_actual) {
     return false;
 }
  }
-}
+
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST['tipo'] == 'estado_pedido_1') {
         $cliente_id = $_POST['cliente_id'];
