@@ -2,7 +2,6 @@
 include '../comunes/session.php';
 checkLogin();
 
-session_start();
 
 // Verifica si la sesión está activa
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 900)) {
