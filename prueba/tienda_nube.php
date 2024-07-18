@@ -41,7 +41,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
     <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube_eliminar">
     <label for="eliminar_pedido">Doc. Cliente</label>
-    <input type="number" id="eliminar_pedido" name="eliminar_pedido">
+    <input type="text" id="eliminar_pedido" name="eliminar_pedido">
     <input type="submit" value="eliminar">
     </form>
     <h4>Modificar</h4>
