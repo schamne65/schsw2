@@ -99,6 +99,7 @@ function eliminarPedido($cliente_id){
 } ;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "entra";
     if ($_POST=['tipo'] == 'tienda_nube_eliminar') {
         $cliente_id = $_POST['eliminar_pedido'];
         if (eliminarPedido($cliente_id)) {
