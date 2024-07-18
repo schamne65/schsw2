@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cliente_id = $_POST['eliminar_pedido'];
         
         echo $cliente_id;
-        if (eliminar($cliente_id)) {
+        if ($cliente_id) {
             echo "Eliminado";
         } else{
             echo "No se puedo eliminar";
