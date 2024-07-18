@@ -87,7 +87,7 @@ function eliminarPedido($cliente_id){
         $base= conexion();
         $consulta = "DELETE FROM despacho_tienda_nube WHERE id_cliente = ?";
         $stmt = $base->prepare($consulta);
-        $stmt = execute([$cliente_id]);
+        $stmt = execute($cliente_id);
         //$stmt->closeCursor(); // Cierra el cursor para liberar recursos
         //$base = null; // Cierra la conexión a la base de datos
         echo "listo";
@@ -99,7 +99,7 @@ function eliminarPedido($cliente_id){
 } 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_POST=['tipo'] == "tienda_nube_eliminar") {
+    if ($_POST=['tipo'] == 'tienda_nube_eliminar') {
         $cliente_id = $_POST['eliminar_pedido'];
         if (eliminarPedido($cliente_id)) {
             echo "Eliminado";
