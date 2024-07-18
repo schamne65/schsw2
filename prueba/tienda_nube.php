@@ -37,13 +37,14 @@ include '../db/conexion.php'; ?>
 if ($_SESSION['username'] == "schswadmin") {?>
     
     <h2>Pedidos Tienda Modificar o eliminar</h2>
-
+    <h4>Eliminar</h4>
     <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube_eliminar">
     <label for="eliminar_pedido">Doc. Cliente</label>
     <input type="number" id="eliminar_pedido" name="eliminar_pedido">
     <input type="submit" value="eliminar">
     </form>
+    <h4>Modificar</h4>
 
     <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube_modificado">
