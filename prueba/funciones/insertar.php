@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $base->prepare($consulta);
         $stmt->execute([$tipo_pedido,$cajas_mixtas,$dulce_leche,$dulce_cacao,$mermelada_frutilla,$mermelada_durazno,$nombre_responsable,$codigo,$fecha,$cliente_id,]);
         $stmt->closeCursor(); // Cierra el cursor para liberar recursos
-$base = null; // Cierra la conexión a la base de datos
+        $base = null; // Cierra la conexión a la base de datos
     
     return true;
     

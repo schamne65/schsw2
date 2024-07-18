@@ -32,7 +32,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
 <?php  include '../comunes/nav.php';
 include '../db/conexion.php'; ?>
 <section>
-<h2>Pedidos Tienda Nube Modificar valores</h2>
+<h2>Pedidos Tienda</h2>
     <form action="./funciones/insertar.php" method="POST" ></form>
 <?php
 if ($_SESSION['username'] == "schswadmin") {?>
