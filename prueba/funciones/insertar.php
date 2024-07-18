@@ -88,8 +88,9 @@ function eliminarPedido($cliente_id){
         $consulta = "DELETE FROM despacho_tienda_nube WHERE id_cliente = ?";
         $stmt = $base->prepare($consulta);
         $stmt = execute([$cliente_id]);
-        $stmt->closeCursor(); // Cierra el cursor para liberar recursos
-        $base = null; // Cierra la conexión a la base de datos
+        //$stmt->closeCursor(); // Cierra el cursor para liberar recursos
+        //$base = null; // Cierra la conexión a la base de datos
+        echo "listo";
         return true;
     } catch (PDOException $e){
         echo 'aca Error al eliminar pedido' . $e->getMessage();
