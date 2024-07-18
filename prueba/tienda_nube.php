@@ -33,7 +33,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
 include '../db/conexion.php'; ?>
 <section>
 <h2>Pedidos Tienda</h2>
-    <form action="./funciones/insertar.php" method="POST" ></form>
+    <form action="./funciones/insertar.php" method="POST" >
 <?php
 if ($_SESSION['username'] == "schswadmin") {?>
     <input type="hidden" name="tipo" value="tienda_nube_modificado">
