@@ -32,13 +32,25 @@ $_SESSION['LAST_ACTIVITY'] = time();
 <?php  include '../comunes/nav.php';
 include '../db/conexion.php'; ?>
 <section>
-<h2>Pedidos Tienda</h2>
-    <form action="./funciones/insertar.php" method="POST" >
+
 <?php
 if ($_SESSION['username'] == "schswadmin") {?>
+    
+    <h2>Pedidos Tienda Modificar o eliminar</h2>
+
+    <form action="./funciones/insertar.php" method="POST" >
+    <input type="hidden" name="tipo" value="tienda_nube_eliminar">
+    <label for="eliminar_pedido">Doc. Cliente</label>
+    <input type="number" id="eliminar_pedido" name="eliminar_pedido">
+    <input type="submit" value="eliminar">
+    </form>
+
+    <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube_modificado">
 
 <?php } else { ?>
+    <h2>Pedidos Tienda </h2>
+    <form action="./funciones/insertar.php" method="POST" >
     <input type="hidden" name="tipo" value="tienda_nube">
         
 <?php } ?>

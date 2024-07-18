@@ -82,6 +82,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
  }
 
+function eliminarPedido($cliente_id){
+    try{
+        $base= conexion();
+        $consulta = "DELETE FROM despacho_tienda_nube WHERE id_cliente = ?";
+        $stmt = $base->prepare($consulta);
+        $stmt = execute([$cliente_id]);
+        return true;
+    } catch (PDOException $e){
+
+    }
+} 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_POST¨= ['tipo'] == "tienda_nube_eliminar") {
+        $cliente_id = $_POST['cliente_id'];
+        if (eliminarPedido($cliente_id)) {
+            echo "Eliminado";
+        } else{
+            echo "No se puedo eliminar";
+        }
+    
+    }
+}
+
 
  function despachoEstado($cliente_id,$estado_pedido) {
     try {
