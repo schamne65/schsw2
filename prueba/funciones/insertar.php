@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "entra";
     if ($_POST=['tipo'] == 'tienda_nube_eliminar') {
         $cliente_id = $_POST['eliminar_pedido'];
-        echo "entra 2"
+        echo "entra 2";
         if (eliminarPedido($cliente_id)) {
             echo "Eliminado";
         } else{
