@@ -82,14 +82,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
  }
 
-function eliminarPedido($cliente_id){
+function eliminar($cliente_id){
     try{
         $base= conexion();
         $consulta = "DELETE FROM despacho_tienda_nube WHERE id_cliente = ?";
         $stmt = $base->prepare($consulta);
         $stmt = execute([$cliente_id]);
-        //$stmt->closeCursor(); // Cierra el cursor para liberar recursos
-        //$base = null; // Cierra la conexión a la base de datos
+        $stmt->closeCursor(); // Cierra el cursor para liberar recursos
+        $base = null; // Cierra la conexión a la base de datos
         echo "listo";
         return true;
     } catch (PDOException $e){
@@ -106,11 +106,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "entra2";
         $cliente_id = $_POST['eliminar_pedido'];
         echo "entra 2";
-        if (eliminarPedido($cliente_id)) {
+        if (eliminar($cliente_id)) {
             echo "Eliminado";
         } else{
             echo "No se puedo eliminar";
         }
+        
     
     }
 }
