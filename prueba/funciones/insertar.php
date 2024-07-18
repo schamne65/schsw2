@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al insertar insumo.";
     }
 }
- }
+ };
 
 function eliminar($cliente_id){
     try{
@@ -98,16 +98,10 @@ function eliminar($cliente_id){
     }
 } ;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "entra";
-   
+if ($_SERVER["REQUEST_METHOD"] == "POST") {   
     if ($_POST['tipo'] == 'tienda_nube_eliminar') {
-
-    echo "entra2";
         $cliente_id = $_POST['eliminar_pedido'];
-        
-        echo $cliente_id;
-        if ($cliente_id) {
+        if (eliminar($cliente_id)) {
             echo "Eliminado";
         } else{
             echo "No se puedo eliminar";
