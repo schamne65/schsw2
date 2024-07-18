@@ -96,7 +96,7 @@ function eliminar($cliente_id){
         echo 'aca Error al eliminar pedido' . $e->getMessage();
         return false;
     }
-} ;
+} 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {   
     if ($_POST['tipo'] == 'tienda_nube_eliminar') {
@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     
     }
-}
+};
 
 
  function despachoEstado($cliente_id,$estado_pedido) {
