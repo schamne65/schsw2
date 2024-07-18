@@ -85,7 +85,7 @@ $(document).ready(function(){
                 url: $(form).attr("action"), // Obtener la URL del atributo action del formulario
                 data: formData,
                 success: function(response){
-                    //alert(response); // Mostrar el resultado
+                    alert(response); // Mostrar el resultado
                     location.reload(); // Recargar la página
                 },
                 error: function(){
