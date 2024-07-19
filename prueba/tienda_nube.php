@@ -121,11 +121,11 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         if ($dias_atrasados >= 2) {
                             $atrasado = $dias_atrasados . " días atrasado";
                         } else {
-                            $atrasado = "No está atrasado";
+                          
                         }
                     
                         // Imprimir la variable $atrasado
-                        echo $atrasado . "<br>";
+                      
                     } ?>
                         
                         <tr>
