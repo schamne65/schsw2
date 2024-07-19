@@ -83,70 +83,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
          
         <input class="guardar" type="submit" value="Guardar">
 </form>
-
-<form action="" method="POST">
-    <input type="hidden" value="descarga" name="tipo">
-    <input type="text" id="descargar" name="descargar">
-    <input type="submit" value="descargar">
-</form>
-
-
-
 <?php
-
-
-
-function descargar($descargar){
-    try{
-        $sql = "SELECT * FROM despacho_tienda_nube";
-        $stmt = $pdo->query($sql);
-        
-        // Nombre del archivo CSV
-        $filename = 'datos_exportados.csv';
-        
-        // Establecer los encabezados para la descarga
-        header('Content-Type: text/csv');
-        header('Content-Disposition: attachment;filename="' . $filename . '"');
-        
-        // Abrir la salida estándar (php://output)
-        $output = fopen('php://output', 'w');
-        
-        // Obtener los nombres de las columnas y escribir la primera fila en el CSV
-        $columnNames = array_keys($stmt->fetch(PDO::FETCH_ASSOC));
-        fputcsv($output, $columnNames);
-        
-        // Reposicionar el puntero al primer registro
-        $stmt->execute();
-        
-        // Escribir los datos en el CSV
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            fputcsv($output, $row);
-        }
-        
-        // Cerrar la conexión y el archivo
-        fclose($output);
-        $pdo = null;
-        exit();
-    }
-}
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_POST['tipo'] == 'descarga') {
-        $descargar= $_POST['descargar'];
-
-    
-
-    // Insertar el proveedor en la base de datos
-    if (descargar($descargar)) {
-       
-    } else {
-        echo "Error al insertar insumo.";
-    }
-}
- } 
-
-
 
         $conexiones = conexion();
         if ($conexiones) {
