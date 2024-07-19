@@ -125,8 +125,8 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         }
                     
                         // Imprimir la variable $atrasado
-                      
-                    } ?>
+                        echo $atrasado . "<br>";
+                     ?>
                         
                         <tr>
                             <td><?php echo $row['id_cliente'] ?></td>
