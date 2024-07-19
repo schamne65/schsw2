@@ -119,7 +119,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $dias_atrasados = $fecha_atrasado->days;
                     echo $estado;
                         // Verificar y mostrar los días atrasados
-                        if ($dias_atrasados >= 2 && $estado  == "Despachado") {
+                        if ( $estado  == "Despachado") {
                             $atrasado = $dias_atrasados . " días atrasado ";
                         } 
                      ?>
