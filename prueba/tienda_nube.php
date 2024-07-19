@@ -120,12 +120,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         // Verificar y mostrar los días atrasados
                         if ($dias_atrasados >= 2) {
                             $atrasado = $dias_atrasados . " días atrasado";
-                        } else {
-                          
-                        }
-                    
-                        // Imprimir la variable $atrasado
-                        echo $atrasado . "<br>";
+                        } 
                      ?>
                         
                         <tr>
@@ -137,7 +132,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                             <td><?php echo $row['mermelada_frutilla'] ?></td>
                             <td><?php echo $row['mermelada_durazno'] ?></td>
                             <td><?php echo $row['nombre_responsable'] ?></td> 
-                            <td><?php echo $row['fecha_armado'] . $atrasado ?></td> 
+                            <td><?php echo $row['fecha_armado']. "</br>" . $atrasado ?></td> 
                             <?php
                             switch ($row['estado_pedido']) {
                                 case 'En Preparacion':?>
