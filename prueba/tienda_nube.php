@@ -110,6 +110,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         </tr>
                     <?php
                     foreach ($resultado as $row) {
+                        $estado=$row['estado_pedido'];
                         $fecha = new DateTime(date("Y-m-d H:i:s"));
                         $fecha_etiqueta = new DateTime($row['fecha_armado']);
                         
@@ -118,7 +119,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $dias_atrasados = $fecha_atrasado->days;
                     
                         // Verificar y mostrar los días atrasados
-                        if ($dias_atrasados >= 2 and $row['estado_pedido'] == "Despachado") {
+                        if ($dias_atrasados >= 2 and $estado  == "Despachado") {
                             $atrasado = $dias_atrasados . " días atrasado ";
                         } 
                      ?>
