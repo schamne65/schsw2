@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "No se puedo eliminar";
         }
         
-    
+    eliminar(22);
     }
 }
 
