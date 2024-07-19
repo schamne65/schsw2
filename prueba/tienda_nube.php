@@ -116,7 +116,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $dias_atrasados = $fecha_atrasado->days;
                  
                         if ($dias_atrasados >=  2) {
-                            mail('schamne65@gmail.com', 'Mi título', 'atrasado varios dias');
+                          
                             $atrasado="$dias_atrasados dias atrasado";
                         } ?>
                         
