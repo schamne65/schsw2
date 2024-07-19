@@ -117,7 +117,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         // Calcular la diferencia entre las fechas
                         $fecha_atrasado = $fecha->diff($fecha_etiqueta);
                         $dias_atrasados = $fecha_atrasado->days;
-                    
+                    echo $estado;
                         // Verificar y mostrar los días atrasados
                         if ($dias_atrasados >= 2 and $estado  == "Despachado") {
                             $atrasado = $dias_atrasados . " días atrasado ";
