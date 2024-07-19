@@ -110,14 +110,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         </tr>
                     <?php
                     foreach ($resultado as $row) {
-                        $fecha = new DateTime(date("Y-m-d H:i:s"));
-                        $fecha_etiqueta = new DateTime($row['fecha_armado']);
-                        $fecha_atrasado = $fecha->diff($fecha_etiqueta);
-                        $dias_atrasados = $fecha_atrasado->days;
-                        if ($fecha_atrasado >=  "2") {
-                            mail('schamne65@gmail.com', 'Mi título', 'atrasado varios dias');
-                            $atrasado="$dias_atrasados dias atrasado";
-                        } ?>
+                   
                         
                         <tr>
                             <td><?php echo $row['id_cliente'] ?></td>
@@ -128,7 +121,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                             <td><?php echo $row['mermelada_frutilla'] ?></td>
                             <td><?php echo $row['mermelada_durazno'] ?></td>
                             <td><?php echo $row['nombre_responsable'] ?></td> 
-                            <td><?php echo $row['fecha_armado'] . $atrasado .$dias_atrasados ?></td> 
+                            <td><?php echo $row['fecha_armado'] ></td> 
                             <?php
                             switch ($row['estado_pedido']) {
                                 case 'En Preparacion':?>
