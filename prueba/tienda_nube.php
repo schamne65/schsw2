@@ -116,11 +116,8 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $dias_atrasados = $fecha_atrasado->days;
                         
                         if ($dias_atrasados >= 2) {
-                            $fecha = new DateTime(date("Y-m-d H:i:s"));
-                            $fecha_etiqueta = new DateTime($row['fecha_armado']);
-                            $fecha_atrasado = $fecha->diff($fecha_etiqueta);
-                            $dias_atrasados = $fecha_atrasado->days;
-                            $atrasado=$dias_atrasados;
+                          
+                            $atrasado=$dias_atrasados. " dias atrasado";
                         } ?>
                         
                         <tr>
@@ -132,7 +129,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                             <td><?php echo $row['mermelada_frutilla'] ?></td>
                             <td><?php echo $row['mermelada_durazno'] ?></td>
                             <td><?php echo $row['nombre_responsable'] ?></td> 
-                            <td><?php echo $row['fecha_armado'].$atrasado ?></td> 
+                            <td><?php echo $row['fecha_armado'] . $atrasado ?></td> 
                             <?php
                             switch ($row['estado_pedido']) {
                                 case 'En Preparacion':?>
