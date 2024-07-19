@@ -40,11 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body class="login">
-    <?php
-    echo $_SESSION['username'];
-    echo $username;
-    ?>
-
 <section>
         <h1>SCH SW</h1>
         <h2>Login Regidiet</h2>
