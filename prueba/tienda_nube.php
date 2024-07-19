@@ -112,13 +112,21 @@ if ($_SESSION['username'] == "schswadmin") {?>
                     foreach ($resultado as $row) {
                         $fecha = new DateTime(date("Y-m-d H:i:s"));
                         $fecha_etiqueta = new DateTime($row['fecha_armado']);
+                        
+                        // Calcular la diferencia entre las fechas
                         $fecha_atrasado = $fecha->diff($fecha_etiqueta);
                         $dias_atrasados = $fecha_atrasado->days;
-                        
+                    
+                        // Verificar y mostrar los días atrasados
                         if ($dias_atrasados >= 2) {
-                          
-                            $atrasado=$dias_atrasados . " dias atrasado";
-                        } ?>
+                            $atrasado = $dias_atrasados . " días atrasado";
+                        } else {
+                            $atrasado = "No está atrasado";
+                        }
+                    
+                        // Imprimir la variable $atrasado
+                        echo $atrasado . "<br>";
+                    } ?>
                         
                         <tr>
                             <td><?php echo $row['id_cliente'] ?></td>
