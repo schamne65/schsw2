@@ -115,7 +115,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $fecha_atrasado = $fecha->diff($fecha_etiqueta);
                         $dias_atrasados = $fecha_atrasado->days;
                  
-                        if ($dias_atrasados >=  2) {
+                        if ($dias_atrasados >=  "2") {
                           
                             $atrasado="$dias_atrasados dias atrasado";
                         } ?>
