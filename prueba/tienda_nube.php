@@ -117,7 +117,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         
                         if ($dias_atrasados >= 2) {
                           
-                            $atrasado="$dias_atrasados dias atrasado";
+                            $atrasado=$dias_atrasados. " dias atrasado";
                         } ?>
                         
                         <tr>
