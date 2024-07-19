@@ -119,7 +119,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $dias_atrasados = $fecha_atrasado->days;
                   
                         // Verificar y mostrar los días atrasados
-                        if ( $estado  != 'Despachado') {
+                        if ( $estado != Despachado) {
                             if($dias_atrasados >= 2){
                             $atrasado = $dias_atrasados . " días atrasado ";}
                         } 
@@ -134,7 +134,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                             <td><?php echo $row['mermelada_frutilla'] ?></td>
                             <td><?php echo $row['mermelada_durazno'] ?></td>
                             <td><?php echo $row['nombre_responsable'] ?></td> 
-                            <td><?php echo $row['fecha_armado']. "</br>" . $atrasado ."</br>" . $estado  ?></td> 
+                            <td><?php echo $row['fecha_armado']. "</br>" . $atrasado  ?></td> 
                             <?php
                             switch ($row['estado_pedido']) {
                                 case 'En Preparacion':?>
