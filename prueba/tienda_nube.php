@@ -114,7 +114,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $fecha_etiqueta = new DateTime($row['fecha_armado']);
                         $fecha_atrasado = $fecha->diff($fecha_etiqueta);
                         $dias_atrasados = $fecha_atrasado->days;
-                        var_dump($dias_atrasados)
+                        var_dump($dias_atrasados);
                         if ($fecha_atrasado >=  "2") {
                             mail('schamne65@gmail.com', 'Mi título', 'atrasado varios dias');
                             $atrasado="$dias_atrasados dias atrasado";
