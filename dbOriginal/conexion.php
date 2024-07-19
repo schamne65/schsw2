@@ -2,7 +2,7 @@
 
 function conexion() {
      try {
-         $base = new PDO('mysql:host=localhost;dbname=c2082289_sch', 'c2082289_sch', 'pilavaBU97');
+         $base = new PDO('mysql:host=localhost;dbname=inventario', 'root', 'mysql');
          $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
          return $base;
      } catch (PDOException $e) {
@@ -11,9 +11,3 @@ function conexion() {
      }
  };
 
-
-
-
-
-
- 
