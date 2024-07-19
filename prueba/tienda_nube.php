@@ -116,7 +116,10 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         $dias_atrasados = $fecha_atrasado->days;
                         
                         if ($dias_atrasados >= 2) {
-                          
+                            $fecha = new DateTime(date("Y-m-d H:i:s"));
+                            $fecha_etiqueta = new DateTime($row['fecha_armado']);
+                            $fecha_atrasado = $fecha->diff($fecha_etiqueta);
+                            $dias_atrasados = $fecha_atrasado->days;
                             $atrasado=$dias_atrasados;
                         } ?>
                         
