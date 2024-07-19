@@ -82,7 +82,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
  };
 
-function eliminar($cliente_id){
+ function eliminar($cliente_id) {
+    try {
+        $base = conexion();
+        $consulta = "DELETE FROM despacho_tienda_nube WHERE id_cliente = ?";
+        $stmt = $base->prepare($consulta);
+        $stmt->execute([$cliente_id]);
+        $stmt->closeCursor(); // Cierra el cursor para liberar recursos
+
+        echo "Listo";
+        return true;
+    } catch (PDOException $e) {
+        echo 'Error al eliminar pedido: ' . $e->getMessage();
+        return false;
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Entra";
+   
+    if ($_POST['tipo'] == 'tienda_nube_eliminar') {
+        echo "Entra2";
+        
+        $cliente_id = $_POST['eliminar_pedido'];
+        
+        echo "Cliente ID: " . $cliente_id . "<br>";
+        
+        if (eliminar($cliente_id)) {
+            echo "Eliminado";
+        } else {
+            echo "No se pudo eliminar";
+        }
+    }
+}
+
+
+/*function eliminar($cliente_id){
     try{
         $base= conexion();
         $consulta = "DELETE FROM despacho_tienda_nube WHERE id_cliente = ?";
@@ -97,19 +132,6 @@ function eliminar($cliente_id){
         return false;
     }
 } 
-
-/*if ($_SERVER["REQUEST_METHOD"] == "POST") {   
-    if ($_POST['tipo'] == 'tienda_nube_eliminar') {
-        $cliente_id = $_POST['eliminar_pedido'];
-        if (eliminar($cliente_id)) {
-            echo "Eliminado";
-        } else{
-            echo "No se puedo eliminar";
-        }
-        
-    
-    }
-};*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "entra";
@@ -129,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     eliminar(22);
     }
 }
-
+*/
 
  function despachoEstado($cliente_id,$estado_pedido) {
     try {
