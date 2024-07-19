@@ -98,7 +98,7 @@ function eliminar($cliente_id){
     }
 } 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {   
+/*if ($_SERVER["REQUEST_METHOD"] == "POST") {   
     if ($_POST['tipo'] == 'tienda_nube_eliminar') {
         $cliente_id = $_POST['eliminar_pedido'];
         if (eliminar($cliente_id)) {
@@ -109,7 +109,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     
     }
-};
+};*/
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "entra";
+   
+    if ($_POST['tipo'] == 'tienda_nube_eliminar') {
+
+    echo "entra2";
+        $cliente_id = $_POST['eliminar_pedido'];
+        
+        echo $cliente_id;
+        if (eliminar($cliente_id)) {
+            echo "Eliminado";
+        } else{
+            echo "No se puedo eliminar";
+        }
+        
+    
+    }
+}
 
 
  function despachoEstado($cliente_id,$estado_pedido) {
