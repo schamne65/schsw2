@@ -109,7 +109,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
 
                         </tr>
                     <?php
-                    foreach ($resultado as $row) {
+                    foreach ($resultado as $row) { ?>
                    
                         
                         <tr>
