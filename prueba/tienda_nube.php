@@ -117,7 +117,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                         
                         if ($dias_atrasados >= 2) {
                           
-                            $atrasado=$dias_atrasados. " dias atrasado";
+                            $atrasado=$dias_atrasados
                         } ?>
                         
                         <tr>
@@ -129,7 +129,7 @@ if ($_SESSION['username'] == "schswadmin") {?>
                             <td><?php echo $row['mermelada_frutilla'] ?></td>
                             <td><?php echo $row['mermelada_durazno'] ?></td>
                             <td><?php echo $row['nombre_responsable'] ?></td> 
-                            <td><?php echo $row['fecha_armado'] . $atrasado ?></td> 
+                            <td><?php echo $row['fecha_armado'] echo $atrasado ?></td> 
                             <?php
                             switch ($row['estado_pedido']) {
                                 case 'En Preparacion':?>
