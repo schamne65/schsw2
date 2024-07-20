@@ -1,3 +1,14 @@
+<?php
+
+   if ($_SESSION['username']=='administracion' || $_SESSION['username']=='Juanmanuel' || $_SESSION['username']=='schswadmin' ){
+     $prueba_menu='<li><a href="../prueba/tienda_nube_especial.php">Armar pedido especial</a></li>';
+   } else { 
+      $prueba_menu="";
+   };
+   
+
+?>
+
 <header>
     <nav id="escritorio">
         <ul class="primera_ul">
@@ -27,6 +38,7 @@
             <li><a href="../prueba/despacho_tienda.php">Estado del pedido</a></li>
             <li><a href="../prueba/tienda_nube.php">Armar pedido convencional</a></li>
             <li><a href="../prueba/tienda_nube_especial.php">Armar pedido especial</a></li>
+            <?php echo $prueba_menu?>
          </ul>
 
         </li>
