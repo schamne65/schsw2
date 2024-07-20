@@ -42,7 +42,7 @@
          </ul>
 
         </li>
-        <li><a href="../usuario/logout.php" class="icon-enter">Salir</a></li>
+        <li><a href="../usuario/logout.php" class="icon-exit">Salir</a></li>
         </ul>
     </nav>
     <button class="desplegable-menu">Menu</button>
